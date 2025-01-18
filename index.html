@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Receipt Template</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="receipt">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="logo.png" alt="Business Logo">
+            <h1>Nourritures et style d’Afrique inc.</h1>
+            <p>Phone: 8738422145 | Email: lawansonolufolake@gmail.com</p>
+        </div>
+
+        <!-- Customer and Receipt Info -->
+        <div class="info">
+            <p><strong>Date:</strong> <span id="currentDate"></span></p>
+        </div>
+
+        <!-- Product Table -->
+        <table id="receiptTable">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" placeholder="Item Name"></td>
+                    <td><input type="number" class="quantity" value="0" min="0"></td>
+                    <td><input type="number" class="price" value="0" min="0" step="0.01"></td>
+                    <td class="itemTotal">0.00</td>
+                    <td><button class="remove-btn">-</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Add Row Button -->
+        <button id="addRow" class="hide-on-export" style="display: inline-block;">Add Item</button>
+
+        <!-- Total Section -->
+        <p class="total">Grand Total: $<span id="grandTotal">0.00</span></p>
+        <button id="export" class="hide-on-export" style="display: inline-block;">Export Receipt</button>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
